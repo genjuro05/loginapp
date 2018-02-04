@@ -2,21 +2,22 @@
     <div class="col-sm-6 mx-auto mt-3">
       <div class="card">
           <div class="card-header"><b>Registro</b></div>
-        <div class="card-body">
-          <form action="">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" class="form-control">
+          <form (submit)="onSubmitAddUser()">
+            <div class="card-body">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" [(ngModel)]="email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control">
+                </div>
+            
             </div>
-            <div class="form-group">
-              <label for="password">Contraseña</label>
-              <input type="password" name="password" id="password" class="form-control">
+            <div class="card-footer">
+              <button class="btn btn-success btn-block btn-lg" type="submit"><i class="fa fa-send"></i> Enviar</button>
             </div>
           </form>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-success btn-block btn-lg"><i class="fa fa-send"></i> Enviar</button>
-        </div>
       </div>
     </div>
   </div>
